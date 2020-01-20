@@ -51,10 +51,10 @@
 		047F8EC3283E5976DFAFDDD927C40A88 /* Pods-MyUniversalApp-MyUniversalAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyUniversalApp-MyUniversalAppUITests-frameworks.sh"; sourceTree = "<group>"; };
 		05EB2E221DD60B8EFCF51F6CEE4D84ED /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		078A675DE62704CDFC4A31799C9BAF0A /* Pods-MyUniversalApp-MyUniversalAppUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyUniversalApp-MyUniversalAppUITests-Info.plist"; sourceTree = "<group>"; };
-		094C63D2B48C5040037A1B03B6261865 /* Pods_MyUniversalApp_MyUniversalAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyUniversalApp_MyUniversalAppUITests.framework; path = "Pods-MyUniversalApp-MyUniversalAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		094C63D2B48C5040037A1B03B6261865 /* Pods_MyUniversalApp_MyUniversalAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyUniversalApp_MyUniversalAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
 		1887AD513EAB7B14A2A3EAB97BBE26FE /* Pods-MyUniversalApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MyUniversalApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		25E3543A6EFC2811889A2A7612BFC57D /* Pods_MyUniversalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyUniversalApp.framework; path = "Pods-MyUniversalApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25E3543A6EFC2811889A2A7612BFC57D /* Pods_MyUniversalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyUniversalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4C66A9CAE176AAB72C4576E0BE4BD54C /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		571603CA3E54B6CD8547FC7AAB992E07 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
@@ -64,12 +64,12 @@
 		83E9B5BB84C092E82462C1D07AE412A3 /* Pods-MyUniversalAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyUniversalAppTests-umbrella.h"; sourceTree = "<group>"; };
 		89426EB03583C42CAA92D2EC00DC9A8A /* Pods-MyUniversalApp-MyUniversalAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyUniversalApp-MyUniversalAppUITests.modulemap"; sourceTree = "<group>"; };
 		996167BAD19D55C6946313C1FD3637CC /* Pods-MyUniversalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyUniversalAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FA2B39FFBE2125A628393137F097F26 /* Pods-MyUniversalAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyUniversalAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A59D030BA9C2DE56AB3D51268B1ED889 /* Pods-MyUniversalApp-MyUniversalAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyUniversalApp-MyUniversalAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A9C534E740FFDF77C1E79B6D083610DB /* Pods-MyUniversalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyUniversalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B2B95BA18B99D7917084156384C6A0B4 /* Pods-MyUniversalApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MyUniversalApp-frameworks.sh"; sourceTree = "<group>"; };
-		BB530383552D807EE84D92F17ACA1531 /* Pods_MyUniversalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MyUniversalAppTests.framework; path = "Pods-MyUniversalAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB530383552D807EE84D92F17ACA1531 /* Pods_MyUniversalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyUniversalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C396629953966CAFC9735430AF3D2B4F /* Pods-MyUniversalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyUniversalApp.release.xcconfig"; sourceTree = "<group>"; };
 		C8FDCF49ADDBEFBD9D192F74987243FD /* Pods-MyUniversalApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyUniversalApp-umbrella.h"; sourceTree = "<group>"; };
 		CDA2D6BC87F39965230A8E3CF325FB05 /* Pods-MyUniversalAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyUniversalAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		CF3AC9F0D58B9F962EEE64C5D2C324A5 /* Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E038EF6D92F04D6F2477EB0546B945C6 /* Pods-MyUniversalApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyUniversalApp-Info.plist"; sourceTree = "<group>"; };
 		E06E29E2979CDBEB5F2AD1D03AF329D3 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32388B020F88EF138A3984A49DA2574 /* Pods-MyUniversalAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MyUniversalAppTests.modulemap"; sourceTree = "<group>"; };
 		E473AEF89063E3384C91DA34E0D9B36B /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		E526F16384521A9D27C88D621796224A /* Pods-MyUniversalApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MyUniversalApp-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -138,7 +138,6 @@
 				0CDBD0D3576836D87BFE122FD7BA5E07 /* SwiftyJSON.swift */,
 				FF2248F76C1F51163F78F4C1DED1A044 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -753,7 +752,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -905,7 +904,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

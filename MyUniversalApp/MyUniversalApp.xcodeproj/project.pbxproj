@@ -21,6 +21,8 @@
 		4660EE4223D5915E0095D97E /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4123D5915E0095D97E /* CountryModel.swift */; };
 		4660EE4523D591A60095D97E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4423D591A60095D97E /* Constants.swift */; };
 		4660EE4723D591D80095D97E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4623D591D80095D97E /* CustomTableViewCell.swift */; };
+		4660EE4923D595A10095D97E /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4823D595A10095D97E /* UIView+AutoLayout.swift */; };
+		4660EE4B23D597150095D97E /* UITableView+Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4A23D597150095D97E /* UITableView+Registration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		4660EE4123D5915E0095D97E /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		4660EE4423D591A60095D97E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4660EE4623D591D80095D97E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		4660EE4823D595A10095D97E /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		4660EE4A23D597150095D97E /* UITableView+Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Registration.swift"; sourceTree = "<group>"; };
 		84552A89617D71A623654DDD /* Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MyUniversalApp-MyUniversalAppUITests/Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		884109DB9C8EDA33EB5A81DE /* Pods-MyUniversalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalApp.debug.xcconfig"; path = "Target Support Files/Pods-MyUniversalApp/Pods-MyUniversalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7489D58835B4B3506C9452 /* Pods_MyUniversalApp_MyUniversalAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyUniversalApp_MyUniversalAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				4660EE4623D591D80095D97E /* CustomTableViewCell.swift */,
+				4660EE4823D595A10095D97E /* UIView+AutoLayout.swift */,
+				4660EE4A23D597150095D97E /* UITableView+Registration.swift */,
 			);
 			path = Uikit;
 			sourceTree = "<group>";
@@ -456,9 +462,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4660EE4B23D597150095D97E /* UITableView+Registration.swift in Sources */,
 				4660EE4723D591D80095D97E /* CustomTableViewCell.swift in Sources */,
 				4660EE4523D591A60095D97E /* Constants.swift in Sources */,
 				4660EE0823D563060095D97E /* ViewController.swift in Sources */,
+				4660EE4923D595A10095D97E /* UIView+AutoLayout.swift in Sources */,
 				4660EE0623D563060095D97E /* AppDelegate.swift in Sources */,
 				4660EE4223D5915E0095D97E /* CountryModel.swift in Sources */,
 				4660EE4023D591340095D97E /* ServiceManager.swift in Sources */,
