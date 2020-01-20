@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		4660EE1023D563070095D97E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4660EE0E23D563070095D97E /* LaunchScreen.storyboard */; };
 		4660EE1B23D563070095D97E /* MyUniversalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE1A23D563070095D97E /* MyUniversalAppTests.swift */; };
 		4660EE2623D563080095D97E /* MyUniversalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE2523D563080095D97E /* MyUniversalAppUITests.swift */; };
+		4660EE4023D591340095D97E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE3F23D591340095D97E /* ServiceManager.swift */; };
+		4660EE4223D5915E0095D97E /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4123D5915E0095D97E /* CountryModel.swift */; };
+		4660EE4523D591A60095D97E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4423D591A60095D97E /* Constants.swift */; };
+		4660EE4723D591D80095D97E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4623D591D80095D97E /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		4660EE2123D563080095D97E /* MyUniversalAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyUniversalAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4660EE2523D563080095D97E /* MyUniversalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUniversalAppUITests.swift; sourceTree = "<group>"; };
 		4660EE2723D563080095D97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4660EE3F23D591340095D97E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		4660EE4123D5915E0095D97E /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		4660EE4423D591A60095D97E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4660EE4623D591D80095D97E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		84552A89617D71A623654DDD /* Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MyUniversalApp-MyUniversalAppUITests/Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		884109DB9C8EDA33EB5A81DE /* Pods-MyUniversalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalApp.debug.xcconfig"; path = "Target Support Files/Pods-MyUniversalApp/Pods-MyUniversalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7489D58835B4B3506C9452 /* Pods_MyUniversalApp_MyUniversalAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyUniversalApp_MyUniversalAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +122,11 @@
 		4660EE0423D563060095D97E /* MyUniversalApp */ = {
 			isa = PBXGroup;
 			children = (
+				4660EE3E23D591140095D97E /* Common */,
+				4660EE3D23D591070095D97E /* Uikit */,
+				4660EE3C23D590FB0095D97E /* Model */,
+				4660EE3B23D590F30095D97E /* Service */,
+				4660EE3A23D590AF0095D97E /* ViewModel */,
 				4660EE0523D563060095D97E /* AppDelegate.swift */,
 				4660EE0723D563060095D97E /* ViewController.swift */,
 				4660EE0923D563060095D97E /* Main.storyboard */,
@@ -142,6 +155,45 @@
 			path = MyUniversalAppUITests;
 			sourceTree = "<group>";
 		};
+		4660EE3A23D590AF0095D97E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4660EE3B23D590F30095D97E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4660EE3F23D591340095D97E /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4660EE3C23D590FB0095D97E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4660EE4123D5915E0095D97E /* CountryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4660EE3D23D591070095D97E /* Uikit */ = {
+			isa = PBXGroup;
+			children = (
+				4660EE4623D591D80095D97E /* CustomTableViewCell.swift */,
+			);
+			path = Uikit;
+			sourceTree = "<group>";
+		};
+		4660EE3E23D591140095D97E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4660EE4423D591A60095D97E /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		8172FDEF6D3B09A710F6E3F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +204,6 @@
 				2D34461FFA14740C189C0267 /* Pods-MyUniversalAppTests.debug.xcconfig */,
 				FE26A4E354880094D1B67D47 /* Pods-MyUniversalAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -405,8 +456,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4660EE4723D591D80095D97E /* CustomTableViewCell.swift in Sources */,
+				4660EE4523D591A60095D97E /* Constants.swift in Sources */,
 				4660EE0823D563060095D97E /* ViewController.swift in Sources */,
 				4660EE0623D563060095D97E /* AppDelegate.swift in Sources */,
+				4660EE4223D5915E0095D97E /* CountryModel.swift in Sources */,
+				4660EE4023D591340095D97E /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
