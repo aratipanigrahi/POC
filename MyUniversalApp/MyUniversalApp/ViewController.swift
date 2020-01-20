@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     let serviceManager = ServiceManager()
     let urlStr = Constants.url
     var detailsArray: [Country] = []
+  //  var activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
 }
 
 
@@ -38,8 +39,16 @@ extension ViewController{
     
     //Mark:Update country details by calling API
     func updateCountryDetails(){
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+//        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+//        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        activityIndicator.startAnimating()
         serviceManager.getCountryDetails(url: urlStr) { [weak self] results, errorMessage in
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+         //   self!.activityIndicator.stopAnimating()
             
             if let result = results {
                 self?.navigationItem.title = result.title
@@ -70,12 +79,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(CustomTableViewCell.self, for: indexPath)
-        
-//        let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: TrackCell.identifier,
-//                                                            for: indexPath) as! CustomTableViewCell
         cell.backgroundColor = .clear
         cell.contentView.backgroundColor = .clear
-        
         let country = detailsArray[indexPath.row]
         cell.descriptionLabel.text = country.description
         cell.titleLable.text = country.title
