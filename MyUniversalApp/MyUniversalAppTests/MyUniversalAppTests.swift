@@ -11,7 +11,7 @@ import XCTest
 
 class MyUniversalAppTests: XCTestCase {
 
-    var serviceManager = ServiceManager()
+    var serviceCore = ServiceCore()
     var detailsArray: [Country] = []
     let urlStr = Constants.url
     
@@ -33,7 +33,7 @@ class MyUniversalAppTests: XCTestCase {
     
     func testFetchCountyDetailSuccess(){
         let expectation = self.expectation(description: "Fetch Block never called")
-        serviceManager.getCountryDetails(url: urlStr) { results, errorMessage in
+        serviceCore.getCountryDetails(url: urlStr) { results, errorMessage in
             XCTAssertNotNil(results)
             XCTAssertNil(errorMessage)
             expectation.fulfill()
@@ -53,14 +53,14 @@ class MyUniversalAppTests: XCTestCase {
         let expectation = self.expectation(description: "testFetchCountyDetailFail")
         
         let invalidURL = "testurl"
-        serviceManager.getCountryDetails(url: invalidURL) { results, error in
+        serviceCore.getCountryDetails(url: invalidURL) { results, error in
             XCTAssertNil(results)
             XCTAssertNotNil(error)
             expectation.fulfill()
         }
         
-//        waitForExpectations(timeout: 10.0) { (error) in
-//            Swift.print(error ?? "")
-//        }
+        waitForExpectations(timeout: 1.0) { (error) in
+            Swift.print(error ?? "")
+        }
     }
 }
