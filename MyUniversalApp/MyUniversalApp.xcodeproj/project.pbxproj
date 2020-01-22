@@ -25,6 +25,7 @@
 		4660EE4B23D597150095D97E /* UITableView+Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE4A23D597150095D97E /* UITableView+Registration.swift */; };
 		4660EE5423D865520095D97E /* CountryDisplaybleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE5323D865520095D97E /* CountryDisplaybleViewModel.swift */; };
 		4660EE5623D866BC0095D97E /* ServiceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE5523D866BC0095D97E /* ServiceCore.swift */; };
+		4660EE5F23D87F730095D97E /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE5E23D87F730095D97E /* UIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		4660EE4A23D597150095D97E /* UITableView+Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Registration.swift"; sourceTree = "<group>"; };
 		4660EE5323D865520095D97E /* CountryDisplaybleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDisplaybleViewModel.swift; sourceTree = "<group>"; };
 		4660EE5523D866BC0095D97E /* ServiceCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCore.swift; sourceTree = "<group>"; };
+		4660EE5E23D87F730095D97E /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		84552A89617D71A623654DDD /* Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MyUniversalApp-MyUniversalAppUITests/Pods-MyUniversalApp-MyUniversalAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		884109DB9C8EDA33EB5A81DE /* Pods-MyUniversalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalApp.debug.xcconfig"; path = "Target Support Files/Pods-MyUniversalApp/Pods-MyUniversalApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AB7489D58835B4B3506C9452 /* Pods_MyUniversalApp_MyUniversalAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyUniversalApp_MyUniversalAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,16 +132,14 @@
 		4660EE0423D563060095D97E /* MyUniversalApp */ = {
 			isa = PBXGroup;
 			children = (
+				4660EE5D23D87EC80095D97E /* View */,
 				4660EE3E23D591140095D97E /* Common */,
-				4660EE3D23D591070095D97E /* Uikit */,
 				4660EE3C23D590FB0095D97E /* Model */,
 				4660EE3B23D590F30095D97E /* Service */,
 				4660EE3A23D590AF0095D97E /* ViewModel */,
 				4660EE0523D563060095D97E /* AppDelegate.swift */,
 				4660EE0723D563060095D97E /* ViewController.swift */,
-				4660EE0923D563060095D97E /* Main.storyboard */,
 				4660EE0C23D563070095D97E /* Assets.xcassets */,
-				4660EE0E23D563070095D97E /* LaunchScreen.storyboard */,
 				4660EE1123D563070095D97E /* Info.plist */,
 			);
 			path = MyUniversalApp;
@@ -194,6 +194,7 @@
 				4660EE4623D591D80095D97E /* CustomTableViewCell.swift */,
 				4660EE4823D595A10095D97E /* UIView+AutoLayout.swift */,
 				4660EE4A23D597150095D97E /* UITableView+Registration.swift */,
+				4660EE5E23D87F730095D97E /* UIConstants.swift */,
 			);
 			path = Uikit;
 			sourceTree = "<group>";
@@ -204,6 +205,16 @@
 				4660EE4423D591A60095D97E /* Constants.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		4660EE5D23D87EC80095D97E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4660EE3D23D591070095D97E /* Uikit */,
+				4660EE0E23D563070095D97E /* LaunchScreen.storyboard */,
+				4660EE0923D563060095D97E /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8172FDEF6D3B09A710F6E3F9 /* Pods */ = {
@@ -469,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4660EE4B23D597150095D97E /* UITableView+Registration.swift in Sources */,
+				4660EE5F23D87F730095D97E /* UIConstants.swift in Sources */,
 				4660EE4723D591D80095D97E /* CustomTableViewCell.swift in Sources */,
 				4660EE4523D591A60095D97E /* Constants.swift in Sources */,
 				4660EE0823D563060095D97E /* ViewController.swift in Sources */,

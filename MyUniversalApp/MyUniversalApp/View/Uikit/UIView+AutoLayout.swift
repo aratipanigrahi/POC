@@ -11,10 +11,6 @@ import UIKit
 extension UIView {
     
     /// Activates the following constraints, provided the view has a superview:
-    /// view.leftAnchor to superview.leftAnchor
-    /// view.rightAnchor to superview.rightAnchor
-    /// view.topAnchor to superview.topAnchor
-    /// view.bottomAnchor to superview.bottomAnchor
     public func pinToSuperview() {
         guard let superview = superview else { return }
         let constraints = [

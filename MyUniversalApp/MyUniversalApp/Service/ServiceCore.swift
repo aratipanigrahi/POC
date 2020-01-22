@@ -30,7 +30,7 @@ class ServiceCore{
         }
         Alamofire.request(url,
                           method: .get,
-                          parameters: ["include_docs": "true"])
+                          parameters: nil)
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess else {
@@ -69,16 +69,16 @@ class ServiceCore{
             return
         }
         
-        for trackDictionary in detailArray {
-            if let trackDictionary = trackDictionary as? JSONDictionary,
-                let title = trackDictionary["title"] as? String,
-                let img  = trackDictionary["imageHref"] as? String,
-                let desc = trackDictionary["description"] as? String
+        for item in detailArray {
+            if let item = item as? JSONDictionary,
+                let title = item["title"] as? String,
+                let img  = item["imageHref"] as? String,
+                let desc = item["description"] as? String 
             {
                 country = Country(title: title, description: desc, imageRef: img)
                 countryArray.append(country)
             } else {
-                errorMessage += "Problem parsing trackDictionary\n"
+                errorMessage += "Problem parsing the dictionary \n"
             }
         }
         

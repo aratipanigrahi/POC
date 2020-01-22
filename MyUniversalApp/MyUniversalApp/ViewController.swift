@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let tableView = UITableView()
+    lazy private var tableView = UITableView()
     let serviceManager = ServiceManager()
     var detailsArray: [Country] = []
     var displayble = CountryDisplaybleViewModel()
@@ -27,8 +27,7 @@ extension ViewController{
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.reuseIdentifier)
-        tableView.frame = CGRect(x: 0, y: 5, width: 30, height: 30)
-        tableView.estimatedRowHeight = 60.0
+        tableView.estimatedRowHeight = CGFloat(UIConstants.estimatedRowHeight)
         tableView.rowHeight = UITableView.automaticDimension
         view.addSubview(tableView)
         tableView.pinToSuperview()
@@ -134,8 +133,6 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        
         return nil
     }
     
@@ -147,7 +144,6 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
     
 }

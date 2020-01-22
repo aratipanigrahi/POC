@@ -56,7 +56,7 @@ extension CountryDisplaybleViewModel:CountryDelegate{
     }
     
     func updateCountryDetail(update item: CountryDetails){
-         self.isLoading = false
+        self.isLoading = false
         self.countrySummary = item
     }
 }

@@ -8,8 +8,6 @@
 
 import Foundation
 
-import SwiftyJSON
-
 class ServiceManager {
     
     open var delegate: CountryDelegate?
@@ -27,7 +25,7 @@ class ServiceManager {
         serviceCore.getCountryDetails(url: url) { [weak self] results, errorMessage in
             if let s = self {
                 let country = CountryDetails(title: (results?.title)!, rows: (results?.rows)!)
-                s.delegate?.updateCountryDetail(update: country)
+                s.didRetrieveData(details: country, with: errorMessage)
             }
         }
     }

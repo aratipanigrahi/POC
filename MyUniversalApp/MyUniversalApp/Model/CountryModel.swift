@@ -26,10 +26,8 @@ struct Country: Equatable {
 
 
 //
-// MARK: - CountryDetails
+// MARK: - CountryDetails Model
 //
-
-///Model for  Country Details
 public class CountryDetails {
     
     let title: String
