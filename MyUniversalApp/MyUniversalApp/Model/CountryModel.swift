@@ -9,7 +9,7 @@
 import Foundation
 
 //Mark:Country Model
-public struct Country: Equatable {
+struct Country: Equatable {
     
     internal(set) var title:String?
     internal(set) var description:String?
@@ -30,7 +30,7 @@ public struct Country: Equatable {
 //
 
 ///Model for  Country Details
-class CountryDetails {
+public class CountryDetails {
     
     let title: String
     var rows:[Country] = []

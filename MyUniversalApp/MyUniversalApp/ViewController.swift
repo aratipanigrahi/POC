@@ -9,64 +9,87 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let tableView = UITableView()
+    private let tableView = UITableView()
     let serviceManager = ServiceManager()
-    let urlStr = Constants.url
     var detailsArray: [Country] = []
-  //  var activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    var displayble = CountryDisplaybleViewModel()
+    var activityIndicator = UIActivityIndicatorView(style: .gray)
 }
 
 
 extension ViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        initTableView()
-        updateCountryDetails()
-    }
-    
-    //Mark :Initialize UiTableView
-    func initTableView() {
-        tableView.frame = self.view.frame
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.reuseIdentifier)
+        tableView.frame = CGRect(x: 0, y: 5, width: 30, height: 30)
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableView.automaticDimension
         view.addSubview(tableView)
         tableView.pinToSuperview()
-    }
-    
-    //Mark:Update country details by calling API
-    func updateCountryDetails(){
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-//        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
-//        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-//        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//        activityIndicator.startAnimating()
-        serviceManager.getCountryDetails(url: urlStr) { [weak self] results, errorMessage in
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-         //   self!.activityIndicator.stopAnimating()
-            
-            if let result = results {
-                self?.navigationItem.title = result.title
-                self?.detailsArray = result.rows.compactMap { $0 }
-                self?.tableView.reloadData()
-                self?.tableView.setContentOffset(CGPoint.zero, animated: false)
-            }
-            
-            if !errorMessage.isEmpty {
-                print("Search error: " + errorMessage)
-            }
-        }
+        self.fetchCountryDetails()
+        self.addActivityIndicator()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
+    
+    //Activity indicator
+    func addActivityIndicator(){
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        view.addConstraint(horizontalConstraint)
+        
+        let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        view.addConstraint(verticalConstraint)
+    }
+    
+    
+    //MarK:Networking fetchCountryDetails
+    private func fetchCountryDetails(){
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        displayble.fetchCountryDetails(urlStr: Constants.url)
+        
+        displayble.updateLoadingStatus = {
+            let _ = self.displayble.isLoading ? self.activityIndicatorStart() : self.activityIndicatorStop()
+        }
+        displayble.didUpdate = {
+            self.didUpdate()
+        }
+    }
+    
+    //Mark :Update the UI
+    private func didUpdate() {
+        self.navigationItem.title = self.displayble.countrySummary!.title
+        self.detailsArray = self.displayble.countrySummary!.rows
+        self.tableView.reloadData()
+        self.tableView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
+    // MARK: - UI Setup
+    private func activityIndicatorStart() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        print("start")
+    }
+    
+    private func activityIndicatorStop() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
+        print("stop")
+    }
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -84,7 +107,7 @@ extension ViewController: UITableViewDataSource {
         let country = detailsArray[indexPath.row]
         cell.descriptionLabel.text = country.description
         cell.titleLable.text = country.title
-        
+        // self.activityIndicatorStart()
         DispatchQueue.global(qos: .background).async {
             if let urlStr = country.imageRef{
                 let url = URL(string:urlStr)
@@ -93,6 +116,7 @@ extension ViewController: UITableViewDataSource {
                     let image = UIImage(data:imageData)
                     DispatchQueue.main.async {
                         cell.cellImageView.image = image
+                        //  self.activityIndicatorStop()
                     }
                 }else{
                     DispatchQueue.main.async {
@@ -111,12 +135,10 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        
         return nil
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
 }
 
 // MARK: - UITableViewDelegate
