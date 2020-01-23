@@ -39,7 +39,7 @@ class MyUniversalAppTests: XCTestCase {
             expectation.fulfill()
         }
         
-        waitForExpectations(timeout: 1.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             Swift.print(error?.localizedDescription as Any)
         }
     }
