@@ -56,19 +56,15 @@ class ServiceCore{
         do {
             response = try JSONSerialization.jsonObject(with: data, options: []) as? JSONDictionary
         } catch let parseError as NSError {
-           // errorMessage += "JSONSerialization error: \(parseError.localizedDescription)\n"
-          //  let desc = parseError.localizedDescription
             errorMessage = parseError.localizedDescription
             
             return
         }
         guard let countryTitle = response!["title"] as? String else {
-           // errorMessage += "Dictionary does not contain results key\n"
             errorMessage = "Dictionary does not contain results key"
             return
         }
         guard let detailArray = response!["rows"] as? [Any] else {
-            //errorMessage += "Dictionary does not contain results key\n"
             errorMessage = "Dictionary does not contain results key"
             return
         }
@@ -81,8 +77,6 @@ class ServiceCore{
             {
                 country = Country(title: title, description: desc, imageRef: img)
                 countryArray.append(country)
-            } else {
-                //errorMessage += "Problem parsing the dictionary \n"
             }
         }
         
