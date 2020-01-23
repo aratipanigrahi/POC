@@ -11,8 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     lazy private var tableView = UITableView()
     let serviceManager = ServiceManager()
+    
     var detailsArray: [Country] = []
-    var displayble = CountryDisplaybleViewModel()
+    lazy var displayble : CountryDisplaybleViewModel = {
+        let displayble = CountryDisplaybleViewModel()
+        return displayble
+    }()
     var activityIndicator = UIActivityIndicatorView(style: .gray)
 }
 
