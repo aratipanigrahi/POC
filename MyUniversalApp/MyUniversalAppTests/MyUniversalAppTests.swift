@@ -11,18 +11,21 @@ import XCTest
 
 class MyUniversalAppTests: XCTestCase {
 
-    var serviceCore = ServiceCore()
-    var detailsArray: [Country] = []
+    var serviceCore:ServiceCore!
+    var detailsArray:[Country]?
     let urlStr = Constants.url
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
+        serviceCore = ServiceCore()
+        detailsArray = []
         
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        serviceCore = nil
+        detailsArray = nil
     }
 
     
@@ -38,10 +41,7 @@ class MyUniversalAppTests: XCTestCase {
             XCTAssertNil(errorMessage)
             expectation.fulfill()
         }
-        
-        waitForExpectations(timeout: 10.0) { (error) in
-            Swift.print(error?.localizedDescription as Any)
-        }
+        wait(for: [expectation], timeout: 10.0)
     }
     
     
@@ -59,8 +59,6 @@ class MyUniversalAppTests: XCTestCase {
             expectation.fulfill()
         }
         
-        waitForExpectations(timeout: 1.0) { (error) in
-            Swift.print(error ?? "")
-        }
+        wait(for: [expectation], timeout: 1.0)
     }
 }

@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     lazy private var tableView = UITableView()
-    let serviceManager = ServiceManager()
-    
-    var detailsArray: [Country] = []
+    lazy var detailsArray: [Country] = []
     lazy var displayble : CountryDisplaybleViewModel = {
         let displayble = CountryDisplaybleViewModel()
         return displayble
@@ -77,7 +75,7 @@ extension ViewController{
         self.navigationItem.title = self.displayble.countrySummary!.title
         self.detailsArray = self.displayble.countrySummary!.rows
         self.tableView.reloadData()
-        self.tableView.setContentOffset(CGPoint.zero, animated: false)
+      //  self.tableView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     // MARK: - UI Setup

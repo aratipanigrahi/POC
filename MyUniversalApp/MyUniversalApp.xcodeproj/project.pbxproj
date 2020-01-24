@@ -12,6 +12,8 @@
 		2D407679222F3F75D67851D4 /* Pods_MyUniversalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDC547ABC65E0F2662DC7D3 /* Pods_MyUniversalApp.framework */; };
 		4644CF8423D91E3700668BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4644CF8323D91E3600668BC1 /* Main.storyboard */; };
 		4644CF8623D91E6A00668BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4644CF8523D91E6A00668BC1 /* LaunchScreen.storyboard */; };
+		4644CF8C23DAFA6600668BC1 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4644CF8B23DAFA6600668BC1 /* ViewModelTests.swift */; };
+		4644CF8E23DB0A6E00668BC1 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4644CF8D23DB0A6E00668BC1 /* ModelTest.swift */; };
 		4660EE0623D563060095D97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE0523D563060095D97E /* AppDelegate.swift */; };
 		4660EE0823D563060095D97E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4660EE0723D563060095D97E /* ViewController.swift */; };
 		4660EE0D23D563070095D97E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4660EE0C23D563070095D97E /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		2D34461FFA14740C189C0267 /* Pods-MyUniversalAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyUniversalAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyUniversalAppTests/Pods-MyUniversalAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4644CF8323D91E3600668BC1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4644CF8523D91E6A00668BC1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4644CF8B23DAFA6600668BC1 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		4644CF8D23DB0A6E00668BC1 /* ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
 		4660EE0223D563060095D97E /* MyUniversalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyUniversalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4660EE0523D563060095D97E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4660EE0723D563060095D97E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 			children = (
 				4660EE1A23D563070095D97E /* MyUniversalAppTests.swift */,
 				4660EE1C23D563080095D97E /* Info.plist */,
+				4644CF8B23DAFA6600668BC1 /* ViewModelTests.swift */,
+				4644CF8D23DB0A6E00668BC1 /* ModelTest.swift */,
 			);
 			path = MyUniversalAppTests;
 			sourceTree = "<group>";
@@ -497,6 +503,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4644CF8E23DB0A6E00668BC1 /* ModelTest.swift in Sources */,
+				4644CF8C23DAFA6600668BC1 /* ViewModelTests.swift in Sources */,
 				4660EE1B23D563070095D97E /* MyUniversalAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
